@@ -1,24 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const App =() =>{
-	let time = new Date().toLocaleTimeString();
-	const [curTime, setTime] = useState(time);
 
-	const UpdateTime = ()=>{
-		let time = new Date().toLocaleTimeString();
-		setTime(time);
-	};
 
-	setInterval(UpdateTime,1000);
-
+const App = () => {
 
 	return (
 		<>
-		<h1> {curTime} </h1>
+		<div className="main_div">
+			<div className="center_div">
+				<br/>
+				<h1> ToDo list </h1>
+				<br/>
+				<input type="text" placeholder="Add Items" />
+				<button> + </button>
+
+				<ol>
+					<li> Apple </li>
+				</ol>
+			</div>
+		</div>
 		</>
 		);
-};
+	};
 
-
-
-export default App;
+export default App; 
